@@ -3,7 +3,8 @@ import babel from 'rollup-plugin-babel';
 
 export default {
     entry : 'src/index.js',
-    format : 'umd',
+    format : 'iife',
+    moduleName: 'lie',
     // sourceMap : true,
     plugins : [
         // resolve(),

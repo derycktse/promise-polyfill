@@ -1,23 +1,37 @@
-class Point {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
+function Promise(fn) {
+    if (typeof fn !== 'function') throw new TypeError(' undefined is not a promise')
 
-  toString() {
-    return '(' + this.x + ', ' + this.y + ')';
-  }
+
+}
+
+function reject() {
+
+}
+
+Promise.resolve = function (value) { }
+
+Promise.reject = function (value) { }
+
+Promise.prototype.then = function (onFulfilled, onRejected) {
+
+    return this
 }
 
 
-let a = new Point(1,2)
+function doResolve(fn, promise) {
+    fn(function (value) {
+        resolve(val)
+    }, function (reason) {
+        reject(reason)
 
-alert(a.toString())
+    })
+}
 
 
+function resolve(value) {
 
-class Foo extends Point {
-  bar() {
-    // will throw an error when this method is defined
-  }
+}
+
+function reject(reason) {
+
 }
